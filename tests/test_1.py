@@ -1,6 +1,10 @@
+import os
+import sys
 import unittest
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath("my_sum"))))
 from my_sum import sum
+
 
 
 class TestSum(unittest.TestCase):

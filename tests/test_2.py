@@ -1,6 +1,9 @@
+import os
+import sys
+import unittest
 from fractions import Fraction
 
-import unittest
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath("my_sum"))))
 
 from my_sum import sum
 
