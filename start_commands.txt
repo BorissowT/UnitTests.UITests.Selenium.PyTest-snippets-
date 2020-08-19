@@ -17,3 +17,4 @@ pytestcommands
 ++++
 pytest pytest\test_pytest_1.py
 pytest pytest (start all tests)
+pytest -v Selenium\test_selenium_if_exeption.py (-v: details)
