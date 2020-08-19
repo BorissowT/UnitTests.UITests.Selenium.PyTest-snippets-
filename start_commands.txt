@@ -1,0 +1,19 @@
+python -m tests.test_1 (usual python start from root folder)
+===============================================
+unittest start (from root directory)
+++++
+python -m tests.test_1 (start one test)
+python -m unittest tests.test_1 tests.test_2 (start 2 tests)
+python -m unittest tests.test_2.test_list_fraction (to start a method of test)
+python -m unittest discover tests (start all tests in "tests" folder)
+
+python -m unittest -v test_module (-v details)
+
+(from tests folder)
+python -m unittest discover (all tests with proper name)
+
+===============================================
+pytestcommands
+++++
+pytest pytest\test_pytest_1.py
+pytest pytest (start all tests)
