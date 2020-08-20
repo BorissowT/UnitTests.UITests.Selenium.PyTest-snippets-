@@ -1,4 +1,5 @@
 python -m tests.test_1 (usual python start from root folder)
+
 ===============================================
 unittest start (from root directory)
 ++++
@@ -6,7 +7,6 @@ python -m tests.test_1 (start one test)
 python -m unittest tests.test_1 tests.test_2 (start 2 tests)
 python -m unittest tests.test_2.test_list_fraction (to start a method of test)
 python -m unittest discover tests (start all tests in "tests" folder)
-
 python -m unittest -v test_module (-v details)
 
 (from tests folder)
@@ -18,3 +18,9 @@ pytestcommands
 pytest pytest\test_pytest_1.py
 pytest pytest (start all tests)
 pytest -v Selenium\test_selenium_if_exeption.py (-v: details)
+pytest -s -v -m smoke tests_with_marks\test_mark1.py (to start tests with marker "smoke")
+pytest -s -v -m "not smoke" tests_with_marks\test_mark1.py (to start all tests without marker "smoke")
+pytest -s -v -m "smoke or regression" tests_with_marks\test_mark1.py (to start tests with marks "smoke" and "regression")
+pytest -s -v -m "smoke and win10" tests_with_marks\test_mark2.py (to start a test with both marks such as "win10" and "smoke")
+pytest -rx -v tests_with_marks\test_mark4.py (to see comments of "xfail" mark)
+(note: to instance a marker u should write it down in pytest.ini)
