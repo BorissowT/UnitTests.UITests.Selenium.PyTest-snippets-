@@ -24,3 +24,19 @@ pytest -s -v -m "smoke or regression" tests_with_marks\test_mark1.py (to start t
 pytest -s -v -m "smoke and win10" tests_with_marks\test_mark2.py (to start a test with both marks such as "win10" and "smoke")
 pytest -rx -v tests_with_marks\test_mark4.py (to see comments of "xfail" mark)
 (note: to instance a marker u should write it down in pytest.ini)
+pytest -s -v --browser_name=firefox test_cmd.py(to start a test in a different browser)
+
+
+"""Ранее мы добавили фикстуру browser, которая создает нам экземпляр браузера для тестов в данном файле. Когда файлов
+с тестами становится больше одного, приходится в каждом файле с тестами описывать данную фикстуру. Это очень неудобно.
+ Для хранения часто употребимых фикстур и хранения глобальных настроек нужно использовать файл conftest.py, который
+  должен лежать в директории верхнего уровня в вашем проекте с тестами. Можно создавать дополнительные файлы conftest.py
+  в других директориях, но тогда настройки в этих файлах будут применяться только к тестам в под-директориях."""
+
+selenium_course_solutions/
+├── section3
+│   └── conftest.py
+│   └── test_languages.py
+├── section4
+│   └── conftest.py
+│   └── test_main_page.py
