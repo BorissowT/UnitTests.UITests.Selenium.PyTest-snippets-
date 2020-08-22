@@ -24,8 +24,8 @@ pytest -s -v -m "smoke or regression" tests_with_marks\test_mark1.py (to start t
 pytest -s -v -m "smoke and win10" tests_with_marks\test_mark2.py (to start a test with both marks such as "win10" and "smoke")
 pytest -rx -v tests_with_marks\test_mark4.py (to see comments of "xfail" mark)
 (note: to instance a marker u should write it down in pytest.ini)
-pytest -s -v --browser_name=firefox test_cmd.py(to start a test in a different browser)
-
+pytest -s -v --browser_name=firefox test_cmd.py(to start a test in a different browser(with parameter))
+pytest -v --tb=line --reruns 1 --browser_name=chrome test_rerun.py(to start test couple of times(pytest-rerunfailures required))
 
 """Ранее мы добавили фикстуру browser, которая создает нам экземпляр браузера для тестов в данном файле. Когда файлов
 с тестами становится больше одного, приходится в каждом файле с тестами описывать данную фикстуру. Это очень неудобно.
