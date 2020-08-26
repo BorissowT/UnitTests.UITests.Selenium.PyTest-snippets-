@@ -18,6 +18,7 @@ pytestcommands
 pytest pytest\test_pytest_1.py
 pytest pytest (start all tests)
 pytest -v Selenium\test_selenium_if_exeption.py (-v: details)
+pytest -s test_page.py::test_as_function_inside_file (to start a test function inside a test file)
 pytest -s -v -m smoke tests_with_marks\test_mark1.py (to start tests with marker "smoke")
 pytest -s -v -m "not smoke" tests_with_marks\test_mark1.py (to start all tests without marker "smoke")
 pytest -s -v -m "smoke or regression" tests_with_marks\test_mark1.py (to start tests with marks "smoke" and "regression")
